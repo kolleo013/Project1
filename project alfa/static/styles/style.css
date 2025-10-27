@@ -1,0 +1,128 @@
+/* main */
+body {
+    margin: 0px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+
+
+/* book 1 */
+.book1{
+    background-color: rgb(102, 18, 255);
+    height: 830px;
+}
+
+
+
+/* book 2 */
+.book2{
+    background-color: rgb(62, 1, 174);
+    height: 830px;
+}
+
+
+
+/* zagolovok page 1 */
+.zagolovok{
+    margin-top: 200px;
+    margin-left: 200px;
+    color: white;
+    font-size: 100px;
+}
+
+.podzagolovok{
+    color: white;
+    text-align: right;
+    font-size: 30px;
+    margin-right: 75px;
+}
+
+
+
+/* navigation */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation>nav>ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navigation>nav>ul>li{
+    padding: 12px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 20px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.navigation>nav>ul>li:hover {
+    background: linear-gradient(45deg, #3E01AE, #5600F4, #7C34FF);
+    background-size: 200% 200%;
+    animation: gradientFlow 2s ease infinite;
+}
+
+.navigation>nav>ul>li>a{
+    text-decoration: none;
+    color:  white;
+}
+
+.ul1{
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+.ul2{
+    padding-right: 5px;
+    margin-top: 5px;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* animation */
+.zagolovok, .podzagolovok, .navigation {
+    opacity: 0; 
+    animation: fadeInUp 1s ease forwards; 
+}
+
+.navigation {
+    animation-delay: 0.2s; 
+}
+
+.zagolovok {
+    animation-delay: 0.5s; 
+}
+
+.podzagolovok {
+    animation-delay: 0.8s; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+    from {
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+}
