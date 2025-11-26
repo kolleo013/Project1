@@ -49,19 +49,73 @@ body {
 
 
 
-/* zagolovok page 1 */
-.zagolovok{
-    margin-top: 200px;
+/* book edit 1 */
+.double-pngtext>h1{
+    display: flex;
+    
+}
+.double-pngtext{
+    display: flex;
+    place-items: center;
+    gap: 50px;
+    margin-top: 20px;
     margin-left: 200px;
+}
+.iconka{
+    max-height: 250px;
+}
+.arrow{
+    max-height: 175px;
+    margin-left: 700px;
+    margin-top: 35px;
+}
+.zagolovok{
     color: white;
     font-size: 100px;
 }
-
 .podzagolovok{
     color: white;
-    text-align: right;
-    font-size: 30px;
-    margin-right: 75px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+/* book edit 2 */
+.double-pngtext2>img{
+    max-height: 150px;
+}
+.double-pngtext2{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    place-items: center;
+    gap: 30px;
+    margin-left: 50px;
+    padding-top: 50px;
+}
+.text{
+    color: white;
+    margin-left: 50px;
+    padding-top: 30px;
+    font-size: 28px;
+}
+.text>div{
+    display: inline-block;
+    gap: 30px;
+    width: 1400px;
+}
+.text>h2{
+    font-size: 40px;
+}
+.text>p>span{
+    font-weight: bold;
+}
+.cat_glass{
+    display: flex;
+    max-height: 350px;
+    float: right;
+    shape-outside: margin-box;
 }
 
 
@@ -71,13 +125,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
 .navigation>nav>ul{
     display: flex;
     list-style: none;
     align-items: center;
 }
-
 .navigation>nav>ul>li{
     padding: 12px;
     border-style: solid;
@@ -87,28 +139,23 @@ body {
     margin: 5px;
     transition: all 0.3s ease;
 }
-
 .navigation>nav>ul>li:hover {
     background: linear-gradient(45deg, #3E01AE, #5600F4, #7C34FF);
     background-size: 200% 200%;
     animation: gradientFlow 2s ease infinite;
 }
-
 .navigation>nav>ul>li>a{
     text-decoration: none;
     color:  white;
 }
-
 .ul1{
     padding-left: 5px;
     margin-top: 5px;
 }
-
 .ul2{
     padding-right: 5px;
     margin-top: 5px;
 }
-
 @keyframes gradientFlow {
     0% {
         background-position: 0% 50%;
@@ -124,23 +171,22 @@ body {
 
 
 /* animation */
-.zagolovok, .podzagolovok, .navigation {
+.zagolovok, .podzagolovok, .navigation, .iconka {
     opacity: 0; 
     animation: fadeInUp 1s ease forwards; 
 }
-
 .navigation {
     animation-delay: 0.2s; 
 }
-
 .zagolovok {
     animation-delay: 0.5s; 
 }
-
 .podzagolovok {
     animation-delay: 0.8s; 
 }
-
+.iconka{
+    animation-delay: 0.5s;
+}
 @keyframes fadeInUp {
     to {
         opacity: 1; 
