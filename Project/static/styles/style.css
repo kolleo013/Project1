@@ -1,55 +1,47 @@
-/* main */
 body {
     margin: 0px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    width: 100vw;
 }
 
-
-
-/* book 1 */
 .book1{
     background-color: rgb(102, 18, 255);
-    height: 830px;
+    min-height: 830px;
+    height: auto;
+    overflow: hidden;
 }
 
-
-
-
-/* book 2 */
 .book2{
     background-color: rgb(62, 1, 174);
-    height: 830px;
+    min-height: 830px;
+    height: auto;
+    overflow: hidden;
 }
 
-
-
-/* book 3 */
 .book3{
     background-color: rgb(102, 18, 255);
-    height: 830px;
+    min-height: 830px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-
-
-/* book 4 */
 .book4{
     background-color: rgb(62, 1, 174);
-    height: 830px;
+    min-height: 830px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 50px;
 }
 
-
-
-/* book 5 */
-.book5{
-    background-color:  rgb(102, 18, 255);
-    height: 830px;
-}
-
-
-
-/* book edit 1 */
 .double-pngtext>h1{
     display: flex;
     
@@ -68,6 +60,7 @@ body {
     max-height: 175px;
     margin-left: 700px;
     margin-top: 35px;
+    margin-bottom: 50px;
 }
 .zagolovok{
     color: white;
@@ -77,11 +70,9 @@ body {
     color: white;
     text-align: center;
     font-size: 25px;
+    margin-bottom: 50px;
 }
 
-
-
-/* book edit 2 */
 .double-pngtext2>img{
     max-height: 150px;
 }
@@ -99,11 +90,13 @@ body {
     margin-left: 50px;
     padding-top: 30px;
     font-size: 28px;
+    padding-right: 50px;
 }
 .text>div{
     display: inline-block;
     gap: 30px;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
 }
 .text>h2{
     font-size: 40px;
@@ -116,22 +109,79 @@ body {
     max-height: 350px;
     float: right;
     shape-outside: margin-box;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 
+.people{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 40px;
+}
 
+.people img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
 
-/* navigation */
+.ulya, .lenya, .danya, .dasha, .masha {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 35px;
+    width: 320px;
+    min-height: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.people > div:hover {
+    transform: translateY(-15px) scale(1.03);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.people p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 25px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navigation{
     display: flex;
     justify-content: space-between;
+    padding: 20px 50px;
 }
 .navigation>nav>ul{
     display: flex;
     list-style: none;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 .navigation>nav>ul>li{
-    padding: 12px;
+    padding: 12px 24px;
     border-style: solid;
     border-width: 0.5px;
     border-color: white;
@@ -147,6 +197,8 @@ body {
 .navigation>nav>ul>li>a{
     text-decoration: none;
     color:  white;
+    font-size: 18px;
+    font-weight: 500;
 }
 .ul1{
     padding-left: 5px;
@@ -168,10 +220,7 @@ body {
     }
 }
 
-
-
-/* animation */
-.zagolovok, .podzagolovok, .navigation, .iconka {
+.zagolovok, .podzagolovok, .navigation, .iconka, .arrow{
     opacity: 0; 
     animation: fadeInUp 1s ease forwards; 
 }
@@ -184,7 +233,7 @@ body {
 .podzagolovok {
     animation-delay: 0.8s; 
 }
-.iconka{
+.iconka, .arrow{
     animation-delay: 0.5s;
 }
 @keyframes fadeInUp {
@@ -196,4 +245,220 @@ body {
         opacity: 0; 
         transform: translateY(30px); 
     }
+}
+
+.book4 {
+    padding: 60px 50px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.book4 p {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.book4 p:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.book4 p:first-child {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+@media (max-width: 1200px) {
+    .double-pngtext {
+        margin-left: 100px;
+    }
+    
+    .arrow {
+        margin-left: 500px;
+    }
+    
+    .text > div {
+        max-width: 1000px;
+    }
+    
+    .people {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .double-pngtext {
+        margin-left: 50px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .zagolovok {
+        font-size: 80px;
+    }
+    
+    .arrow {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    .double-pngtext2 {
+        margin-left: 30px;
+        font-size: 30px;
+    }
+    
+    .text {
+        margin-left: 30px;
+        font-size: 22px;
+    }
+    
+    .text > h2 {
+        font-size: 32px;
+    }
+    
+    .cat_glass {
+        float: none;
+        display: block;
+        margin: 0 auto 30px;
+    }
+    
+    .people {
+        max-width: 900px;
+    }
+    
+    .ulya, .lenya, .danya, .dasha, .masha {
+        width: 280px;
+        min-height: 400px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .zagolovok {
+        font-size: 60px;
+    }
+    
+    .podzagolovok {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    
+    .double-pngtext2 {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .text {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    
+    .text > h2 {
+        font-size: 26px;
+    }
+    
+    .people {
+        padding: 20px;
+        gap: 30px;
+        max-width: 700px;
+    }
+    
+    .book4 {
+        padding: 40px 20px;
+        font-size: 18px;
+    }
+    
+    .people img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .ulya, .lenya, .danya, .dasha, .masha {
+        width: 260px;
+        min-height: 380px;
+        padding: 25px;
+    }
+    
+    .people p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .zagolovok {
+        font-size: 40px;
+    }
+    
+    .podzagolovok {
+        font-size: 18px;
+    }
+    
+    .double-pngtext2 h2 {
+        font-size: 24px;
+    }
+    
+    .navigation > nav > ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navigation > nav > ul > li {
+        width: 80%;
+        text-align: center;
+    }
+    
+    .people > div {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .book1, .book2, .book3, .book4 {
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .people img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .ulya, .lenya, .danya, .dasha, .masha {
+        width: 100%;
+        max-width: 300px;
+        min-height: 360px;
+        padding: 20px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.book1, .book2, .book3, .book4 {
+    border: none;
+    outline: none;
 }
